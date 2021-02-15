@@ -69,20 +69,25 @@ TR2     10
     Transcript:	          TTTTTTTTTTTTTTTTTTTT
 ```
 ### Output file 1
+```
 TR1     4       CHR1    7
 TR2     0       CHR2    10
 TR1     13      CHR1    23
 TR2     10      CHR2    20
-
+```
 
 ### Input file 1 (multi-mapped transcript example)
+```
 TR1     CHR1    0       3I2M2D3I3M
 TR1     CHR2    1       3M5I1M1D2M
+```
 
 ### Query file 2
+```
 TR1     1
 TR1     6
 TR1     10
+```
 
 ```python3
     python3 Tr2Chr.py -i test_files/T2GAlignment_2.txt -q test_files/query_2.txt
@@ -97,15 +102,16 @@ TR1     10
     Transcript:	 TTTTTTTTT-TT
 ```
 ### Output file 2
+```
 TR1     1       CHR1    0
-
 TR1     1       CHR2    2
 TR1     6       CHR1    4
 TR1     6       CHR2    4
 TR1     10      CHR1    6
 TR1     10      CHR2    7
+```
 
-
+### Source Code
 ```python
 global consumes_both, consumes_query, consumes_reference
 consumes_both = ['M', '=', 'X']
