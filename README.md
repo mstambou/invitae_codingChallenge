@@ -44,6 +44,30 @@ The script also handles the following exceptions and warns the user about them:
 ```
 
 
+```python3
+ python3 Tr2Chr.py -i test_files/T2GAlignment_1.txt -q test_files/query_1.txt
+    0) Transcript : TR1	Chromosome : CHR1	AlnStart : 3	CIGAR : 8M7D6M2I2M11D7M
+    Chromosome:	GGGGGGGGGGGGGGGGGGGGGGGG--GGGGGGGGGGGGGGGGGGGG...
+    Alignment :	...||||||||.......||||||..||...........|||||||
+    Transcript:	   TTTTTTTT-------TTTTTTTTTT-----------TTTTTTT
+    
+    1) Transcript : TR2	Chromosome : CHR2	AlnStart : 10	CIGAR : 20M
+    Chromosome:	GGGGGGGGGGGGGGGGGGGGGGGGGGGGGG...
+    Alignment :	..........||||||||||||||||||||
+    Transcript:	          TTTTTTTTTTTTTTTTTTTT
+    
+    python3 Tr2Chr.py -i test_files/T2GAlignment_2.txt -q test_files/query_2.txt
+    0) Transcript : TR1	Chromosome : CHR1	AlnStart : 0	CIGAR : 3I2M2D3I3M
+    Chromosome:	---GGGG---GGG...
+    Alignment :	...||.....|||
+    Transcript:	TTTTT--TTTTTT
+    
+    1) Transcript : TR1	Chromosome : CHR2	AlnStart : 1	CIGAR : 3M5I1M1D2M
+    Chromosome:	GGGG-----GGGG...
+    Alignment :	.|||.....|.||
+    Transcript:	 TTTTTTTTT-TT
+```
+
 
 
 ```python
@@ -167,27 +191,7 @@ get_T2Gcoords(query_f, T2Galignment_dic)
 
 ```
 
-    python3 Tr2Chr.py -i test_files/T2GAlignment_1.txt -q test_files/query_1.txt
-    0) Transcript : TR1	Chromosome : CHR1	AlnStart : 3	CIGAR : 8M7D6M2I2M11D7M
-    Chromosome:	GGGGGGGGGGGGGGGGGGGGGGGG--GGGGGGGGGGGGGGGGGGGG...
-    Alignment :	...||||||||.......||||||..||...........|||||||
-    Transcript:	   TTTTTTTT-------TTTTTTTTTT-----------TTTTTTT
-    
-    1) Transcript : TR2	Chromosome : CHR2	AlnStart : 10	CIGAR : 20M
-    Chromosome:	GGGGGGGGGGGGGGGGGGGGGGGGGGGGGG...
-    Alignment :	..........||||||||||||||||||||
-    Transcript:	          TTTTTTTTTTTTTTTTTTTT
-    
-    python3 Tr2Chr.py -i test_files/T2GAlignment_2.txt -q test_files/query_2.txt
-    0) Transcript : TR1	Chromosome : CHR1	AlnStart : 0	CIGAR : 3I2M2D3I3M
-    Chromosome:	---GGGG---GGG...
-    Alignment :	...||.....|||
-    Transcript:	TTTTT--TTTTTT
-    
-    1) Transcript : TR1	Chromosome : CHR2	AlnStart : 1	CIGAR : 3M5I1M1D2M
-    Chromosome:	GGGG-----GGGG...
-    Alignment :	.|||.....|.||
-    Transcript:	 TTTTTTTTT-TT
+   
     
 
 
