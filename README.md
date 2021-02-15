@@ -45,8 +45,8 @@ The script also handles the following exceptions and warns the user about them:
 
 ## Code Demo
 ### Input file 1
-TR1     CHR1    3       8M7D6M2I2M11D7M
-TR2     CHR2    10      20M
+TR1   CHR1  3   8M7D6M2I2M11D7M
+TR2   CHR2  10  20M
 
 ### Query file 1
 TR1     4
