@@ -33,4 +33,12 @@ The script also handles the following exceptions and warns the user about them:
  * If an invalid CIGAR alignment string is provided by the user, the script warns the user about this and skips it.
  * If an invalid query is asked by the user over the provided alignments, i.e. if the coordinate for the transcript is out of bounds, then the script will warn the user and will skip this query.
  
- By the end of the exectution the script will list the different transcript to chromosome alignments, as well construct their alignments based on the CIGAR string and chromosome start information and output a tab separated file listing these transformations for each of the queries, from transcript cooridinates to chromosome coordinates. The output will be saved in the same directory as the input files, with the suffix: 
+ By the end of the exectution the script will list the different transcript to chromosome alignments, as well construct their alignments based on the CIGAR string and chromosome start information and output a tab separated file listing these transformations for each of the queries, from transcript cooridinates to chromosome coordinates. The output will be saved in the same directory as the input files, with the suffix: _T2Gcoords.tsv
+ 
+ Example to run the script:
+ 
+ ```python3
+ python3 Tr2Chr.py -i test_files/T2GAlignment_1.txt -q test_files/query_1.txt
+ 
+ python3 Tr2Chr.py -i test_files/T2GAlignment_2.txt -q test_files/query_2.txt
+```
