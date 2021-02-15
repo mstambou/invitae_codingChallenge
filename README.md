@@ -45,15 +45,17 @@ The script also handles the following exceptions and warns the user about them:
 
 ## Code Demo
 ### Input file 1
+```
 TR1   CHR1  3   8M7D6M2I2M11D7M
 TR2   CHR2  10  20M
-
+```
 ### Query file 1
+```
 TR1     4
 TR2     0
 TR1     13
 TR2     10
-
+```
 ```python3
     python3 Tr2Chr.py -i test_files/T2GAlignment_1.txt -q test_files/query_1.txt
     0) Transcript : TR1	Chromosome : CHR1	AlnStart : 3	CIGAR : 8M7D6M2I2M11D7M
