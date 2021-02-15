@@ -96,6 +96,7 @@ TR1     10
 ```
 ### Output file 2
 TR1     1       CHR1    0
+
 TR1     1       CHR2    2
 TR1     6       CHR1    4
 TR1     6       CHR2    4
