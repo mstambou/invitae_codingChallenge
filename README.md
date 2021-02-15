@@ -43,9 +43,19 @@ The script also handles the following exceptions and warns the user about them:
  python3 Tr2Chr.py -i test_files/T2GAlignment_2.txt -q test_files/query_2.txt
 ```
 
+## Code Demo
+### Input file 1
+TR1     CHR1    3       8M7D6M2I2M11D7M
+TR2     CHR2    10      20M
+
+### Query file 1
+TR1     4
+TR2     0
+TR1     13
+TR2     10
 
 ```python3
- python3 Tr2Chr.py -i test_files/T2GAlignment_1.txt -q test_files/query_1.txt
+    python3 Tr2Chr.py -i test_files/T2GAlignment_1.txt -q test_files/query_1.txt
     0) Transcript : TR1	Chromosome : CHR1	AlnStart : 3	CIGAR : 8M7D6M2I2M11D7M
     Chromosome:	GGGGGGGGGGGGGGGGGGGGGGGG--GGGGGGGGGGGGGGGGGGGG...
     Alignment :	...||||||||.......||||||..||...........|||||||
@@ -55,7 +65,24 @@ The script also handles the following exceptions and warns the user about them:
     Chromosome:	GGGGGGGGGGGGGGGGGGGGGGGGGGGGGG...
     Alignment :	..........||||||||||||||||||||
     Transcript:	          TTTTTTTTTTTTTTTTTTTT
-    
+```
+### Output file 1
+TR1     4       CHR1    7
+TR2     0       CHR2    10
+TR1     13      CHR1    23
+TR2     10      CHR2    20
+
+
+### Input file 1 (multi-mapped transcript example)
+TR1     CHR1    0       3I2M2D3I3M
+TR1     CHR2    1       3M5I1M1D2M
+
+### Query file 2
+TR1     1
+TR1     6
+TR1     10
+
+```python3
     python3 Tr2Chr.py -i test_files/T2GAlignment_2.txt -q test_files/query_2.txt
     0) Transcript : TR1	Chromosome : CHR1	AlnStart : 0	CIGAR : 3I2M2D3I3M
     Chromosome:	---GGGG---GGG...
@@ -67,7 +94,13 @@ The script also handles the following exceptions and warns the user about them:
     Alignment :	.|||.....|.||
     Transcript:	 TTTTTTTTT-TT
 ```
-
+### Output file 2
+TR1     1       CHR1    0
+TR1     1       CHR2    2
+TR1     6       CHR1    4
+TR1     6       CHR2    4
+TR1     10      CHR1    6
+TR1     10      CHR2    7
 
 
 ```python
